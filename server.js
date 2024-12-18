@@ -31,5 +31,11 @@ sequelize.sync()
     .then(() => console.log('Database synced...'))
     .catch(err => console.log('Error: ' + err));
 
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port} Successfully.`)
+})
+
 // Export the app for Vercel
 module.exports = app;
